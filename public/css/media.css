@@ -1,0 +1,99 @@
+@media screen and (max-width: 768px){
+    html {
+        font-size: 52.5%;
+    }
+    .contact-ribbon {
+        display: none;
+    }
+
+    
+    .navbar-brand img {
+        width: 80px;
+    }
+
+    .navbar {
+        color: #fff;
+    }
+
+    .figure{
+        width: 100px;
+        height: 100px;
+        float: none;
+      }
+
+      .figureContainer {
+          display: flex;
+          justify-content: center;
+      }
+
+      .tour .video {
+          height: 40vh;
+      }
+
+      .icons .icon {
+        margin-bottom: 3rem;
+      }
+
+      .news {
+        margin: 7rem 0;
+    }
+    
+     div[class*="col"] {
+        
+        margin-bottom: 5rem;
+    }
+
+    .news .newsList {
+        position: static;
+       
+    }
+    
+
+}
+
+
+
+
+
+
+@media screen and (max-width: 425px) {
+
+    html {
+        font-size: 52.5%;
+    }
+
+    .nav-col {
+        margin: 0 !important;
+    }
+
+    .ribbon-col {
+        margin: 0 !important;
+    }
+    .navbar-brand img {
+        position: static;
+    }
+
+    .hero .slide-text h1 {
+        font-size: 4rem;
+      
+    }
+
+    .count:nth-child(1){
+        margin-bottom: 4rem;
+    }
+
+    .message {
+        margin-top: 10rem;
+    }
+
+    .count {
+        width: 16rem;
+    }
+
+    iframe {
+       margin-top: 5rem;
+    }
+
+
+    
+}
