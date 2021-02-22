@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form
+      action="/admin/add-courses"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      <input type="text" name="department" placeholder="department name" />
+      <input type="text" name="title" placeholder="course name" />
+      <input type="file" name="image" placeholder="url" />
+      <input type="text" name="seats" placeholder="seats" />
+      <input type="text" name="shift" placeholder="shift" />
+      <input type="submit" value="submit" />
+    </form>
+  </body>
+</html>

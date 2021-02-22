@@ -378,49 +378,23 @@
 
 
                             <ul class="list-group list-group-flush">
-                              <li class="list-group-item">
-                                  <div>
-                                      <h5 class="mb-4"> <i class="far fa-clock mr-3"></i>may 26, 2020</h5>
-                                      <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asp</h3>
-                                  </div>
-                              </li>
-                              <li class="list-group-item">
-                                <div>
-                                    <h5 class="mb-4"> <i class="far fa-clock mr-3"></i>may 26, 2020</h5>
-                                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asp</h3>
-                                </div>
-                            </li>
-                              <li class="list-group-item">
-                                <div>
-                                    <h5 class="mb-4"> <i class="far fa-clock mr-3"></i>may 26, 2020</h5>
-                                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asp</h3>
-                                </div>
-                            </li>
-                              <li class="list-group-item">
-                                <div>
-                                    <h5 class="mb-4"> <i class="far fa-clock mr-3"></i>may 26, 2020</h5>
-                                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asp</h3>
-                                </div>
-                            </li>
-                              <li class="list-group-item">
-                                <div>
-                                    <h5 class="mb-4"> <i class="far fa-clock mr-3"></i>may 26, 2020</h5>
-                                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asp</h3>
-                                </div>
-                            </li>
-                              <li class="list-group-item">
-                                <div>
-                                    <h5 class="mb-4"> <i class="far fa-clock mr-3"></i>may 26, 2020</h5>
-                                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asp</h3>
-                                </div>
-                            </li>
+                         
+                              
+                              <% for (const notification of notifications) { %>
+                                    <li class="list-group-item">
+                                        <div>
+                                            <h5 class="mb-4"> <i class="far fa-clock mr-3"></i>may 26, 2020</h5>
+                                            <h3><%= notification.notice %></h3>
+                                        </div>
+                                    </li>
+                                <% } %>
                             
                         </ul>
                     </div>
                             <div class="list-group-item">
                                 <div class="d-flex justify-content-center">
 
-                                    <p class="moreText">More News! <span><i class="fas fa-long-arrow-alt-right"></i></span></p>
+                                    <a href="/notification" class="moreText d-block">More News! <span><i class="fas fa-long-arrow-alt-right"></i></span></a>
                                         
                                 </div>
                             </div>

@@ -1,10 +1,17 @@
 <%- include('../includes/head.ejs') %>
   </head>
   <body>
-    <form action="/admin/add-notification" method="POST">
-      <label for="">enter</label>
-      <input type="text" name="notice" /> 
-      <input type="submit" value="upload" />
-    </form>
+    <div class="container-fluid">
+      <%- include('../includes/navigation.ejs') %>
+      <div class="add-notice">
+        <form action="/admin/add-notification" method="POST">
+          <label for="">enter</label>
+          <input type="text" name="notice" /> 
+          <input type="submit" value="upload" />
+        </form>
+
+      </div>
+
+    </div>
   </body>
 </html>

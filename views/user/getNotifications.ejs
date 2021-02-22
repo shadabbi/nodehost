@@ -1,0 +1,13 @@
+<%- include('../includes/head.ejs') %>
+  </head>
+  <body>
+    <%- include('../includes/navigation') %>
+    <ul>
+      <% if(allNotice.length > 0) { %> <% allNotice.forEach(function(notice){ %>
+      <h1><%= notice.notice %></h1>
+      <% }); %> <% } else { %>
+      <h1>not</h1>
+      <% } %>
+    </ul>
+  </body>
+</html>
