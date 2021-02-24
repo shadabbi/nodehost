@@ -74,6 +74,8 @@
                               </div>
                               <div class="app-form-group message">
                                 <input name="message" class="app-form-control" placeholder="MESSAGE">
+              <input type="hidden" value="<%= csrfToken %>" name="_csrf" />
+
                               </div>
                               <div class="app-form-group buttons">
                                 <button class="app-form-button">CANCEL</button>

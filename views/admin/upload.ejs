@@ -10,6 +10,7 @@
     <form action="/admin/upload" method="POST" enctype="multipart/form-data">
       <input type="file" name="image" multiple="multiple" />
       <input type="submit" value="upload" />
+      <input type="hidden" value="<%= csrfToken %>" name="_csrf" />
     </form>
   </body>
 </html>

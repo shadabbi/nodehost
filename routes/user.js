@@ -10,9 +10,14 @@ path.join(__dirname, "myfile.mp3");
 const router = express.Router();
 
 router.get("/contact", (req, res, next) => {
-  console.log(req.session.test);
   res.render("user/contact", { title: "contact" });
 });
+
+router.get("/login", notificationController.getLogin);
+router.post("/login", notificationController.postLogin);
+router.get("/logout", notificationController.logout);
+router.get("/signup", notificationController.getSignup);
+router.post("/signup", notificationController.postSignup);
 
 router.get("/notification", notificationController.getNotifications);
 router.get("/gellary", notificationController.getGellary);

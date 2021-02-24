@@ -8,6 +8,8 @@
           <label for="">enter</label>
           <input type="text" name="notice" /> 
           <input type="submit" value="upload" />
+          <input type="hidden" value="<%= csrfToken %>" name="_csrf" />
+
         </form>
 
       </div>

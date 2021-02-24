@@ -46,13 +46,17 @@ exports.getCourses = (req, res) => {
 };
 
 exports.getLogin = (req, res, next) => {
-  res.render("admin/login", {
+  if (req.session.isLoggedIn) {
+    return res.redirect("/admin/add-notification");
+  }
+  res.render("user/login", {
     title: "login",
+    error: req.flash("loginError"),
   });
 };
 
 exports.getSignup = (req, res, next) => {
-  res.render("admin/signup", {
+  res.render("user/signup", {
     title: "signup",
   });
 };
@@ -89,15 +93,17 @@ exports.postLogin = (req, res, next) => {
 
   User.findOne({ email: email }).then((user) => {
     if (!user) {
-      return res.redirect("/admin/login");
+      req.flash("loginError", "Invalid Email or Password");
+      return res.redirect("/login");
     }
 
     bcrypt.compare(password, user.password).then((isMached) => {
       if (isMached) {
         req.session.isLoggedIn = true;
-        res.redirect("/");
+        res.redirect("/admin/add-courses");
       } else {
-        res.redirect("/admin/login");
+        req.flash("loginError", "Invalid Email or Password");
+        res.redirect("/login");
       }
     });
   });
